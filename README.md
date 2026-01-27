@@ -1,51 +1,141 @@
-# Welcome to your Expo app 👋
+# 📖 My-Quran
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A digital Al-Qur'an application built with React Native that provides complete access to all surahs of the Al-Qur'an with Arabic text, Latin transliteration, Indonesian translation, and Qori audio recitation.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+### ✅ Available
 
-   ```bash
-   npm install
-   ```
+- **Digital Al-Qur'an**
+  - Complete 30 Juz with all 114 Surahs
+  - Original Arabic text
+  - Latin transliteration
+  - Indonesian translation
+  - Qori audio recitation for each verse
+  - Easy navigation between surahs
 
-2. Start the app
+- **Prayer Time Reminder**
+  - Automatic notifications at adhan time
+  - Alarm reminders for all 5 prayer times
+  - Location-based prayer times
 
-   ```bash
-   npx expo start
-   ```
+### 🚧 Coming Soon
 
-In the output, you'll find options to open the app in a
+- **Yasin & Tahlil**
+  - Complete Surah Yasin
+  - Tahlil recitation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **Wirid and Dua**
+  - Daily dhikr collection
+  - Selected Islamic supplications
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠️ Tech Stack
 
-## Get a fresh project
+- **Framework**: React Native (Expo)
+- **Language**: TypeScript
+- **Platform**: Android
+- **API**: [Equran.id API v2](https://equran.id/apidev/v2)
 
-When you're ready, run:
+## 📋 Prerequisites
+
+Make sure you have installed:
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Expo CLI
+- Android Studio (for emulator) or VS Code if use Expo Go in your own android
+
+## 🚀 Installation
+
+1. Clone this repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/Codenames-Ren/My-Quran.git
+cd My-Quran
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Start the application
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm start
+```
 
-## Join the community
+4. Choose an option to run:
+   - Press `a` for Android emulator
+   - Scan QR code with Expo Go on your Android device
 
-Join our community of developers creating universal apps.
+## 📁 Project Structure
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-"# My-Quran" 
+```
+My-Quran/
+├── app/                    # Main screens & routing (Expo Router)
+│   └── surah/             # Surah-related screens
+│       ├── _layout.tsx    # Surah layout
+│       ├── index.tsx      # Surah home screen
+│       ├── modal.tsx      # Modal components
+│       └── quran.tsx      # Quran reading screen
+├── assets/                # Images, fonts, and other resources
+├── components/            # Reusable UI components
+├── src/                   # Core source code
+│   ├── api/              # API integration & data fetching
+│   ├── constants/        # App constants and configurations
+│   ├── hooks/            # Custom React hooks
+│   ├── styles/           # Global styles and themes
+│   └── utils/            # Utility functions and helpers
+├── scripts/              # Build and utility scripts
+├── .vscode/              # VSCode configuration
+├── app.json              # Expo configuration
+├── package.json          # Dependencies and scripts
+└── tsconfig.json         # TypeScript configuration
+```
+
+## 🌐 API Reference
+
+This application uses [Equran.id API v2](https://equran.id/apidev/v2)
+
+### Main Endpoints:
+
+- `/surat` - Get list of all surah
+- `/surat/{number}` - Get specific surah details with verses
+
+API integration is handled in the `src/api` directory.
+
+## 📱 Screenshots
+
+_(Coming Soon)_
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Create a Pull Request
+
+## 📄 License
+
+This project is open source for educational purposes.
+
+## 👨‍💻 Developer
+
+**Codenames-Ren**
+
+- GitHub: [@Codenames-Ren](https://github.com/Codenames-Ren)
+
+## 🙏 Acknowledgments
+
+- [Equran.id](https://equran.id) for the amazing Al-Qur'an API
+- Expo team for the powerful framework
+- All open source contributors
+
+---
+
+**Made with ❤️ to help Muslims read the Al-Qur'an easily**
