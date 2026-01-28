@@ -25,7 +25,7 @@ A digital Al-Qur'an application built with React Native that provides complete a
   - Complete Surah Yasin
   - Tahlil recitation
 
-- **Wirid and Dua**
+- **Dhikir and Dua**
   - Daily dhikr collection
   - Selected Islamic supplications
 

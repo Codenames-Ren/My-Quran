@@ -6,5 +6,5 @@ export async function apiFetch<T>(endpoint: string): Promise<T> {
     throw new Error("Failed to fetch API");
   }
 
-  return res.json();
+  return res.json() as Promise<T>;
 }
