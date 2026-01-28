@@ -88,8 +88,7 @@ My-Quran/
 │   ├── hooks/            # Custom React hooks
 │   ├── styles/           # Global styles and themes
 │   └── utils/            # Utility functions and helpers
-├── scripts/              # Build and utility scripts
-├── .vscode/              # VSCode configuration
+├── scripts/              # Build and utility scripts              
 ├── app.json              # Expo configuration
 ├── package.json          # Dependencies and scripts
 └── tsconfig.json         # TypeScript configuration
