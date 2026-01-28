@@ -14,12 +14,12 @@ A digital Al-Qur'an application built with React Native that provides complete a
   - Qori audio recitation for each verse
   - Easy navigation between surahs
 
+### 🚧 Coming Soon
+
 - **Prayer Time Reminder**
   - Automatic notifications at adhan time
   - Alarm reminders for all 5 prayer times
   - Location-based prayer times
-
-### 🚧 Coming Soon
 
 - **Yasin & Tahlil**
   - Complete Surah Yasin
@@ -122,7 +122,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📄 License
 
-This project is open source for educational purposes.
+This open-source project is designed to help fellow Muslims read the Quran more easily.
 
 ## 👨‍💻 Developer
 
