@@ -5,7 +5,7 @@ import { useAyatAudio } from "@/src/hooks/useAyatAudio";
 import { QoriKey, getNextQori } from "@/src/utils/qori";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import { useEffect, useState } from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function SurahDetailScreen() {
@@ -29,53 +29,55 @@ export default function SurahDetailScreen() {
 
   if (!surah) return null;
 
-  function handlePlayAyat(ayatindex: number) {
-    const ayat = surah.ayat[ayatindex];
+  function handlePlayAyat(index: number) {
+    const ayat = surah.ayat[index];
 
     playAyat(ayat.audio[qori], ayat.nomorAyat, () => {
-      const nextIndex = ayatindex + 1;
-
-      if (nextIndex < surah.ayat.length) {
-        handlePlayAyat(nextIndex);
-      }
+      const next = index + 1;
+      if (next < surah.ayat.length) handlePlayAyat(next);
     });
   }
 
   return (
-    <ScrollView
-      style={{ flex: 1, backgroundColor: "#0F172A" }}
-      contentContainerStyle={{
-        padding: 16,
-        paddingBottom: Math.max(insets.bottom, 16) + 48,
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#0F172A",
+        paddingBottom: Math.max(insets.bottom, 16),
       }}
     >
-      <SurahHeader surah={surah} />
+      <ScrollView
+        style={{ flex: 1, backgroundColor: "#0F172A" }}
+        contentContainerStyle={{ padding: 16 }}
+      >
+        <SurahHeader surah={surah} />
 
-      {surah.nomor !== 1 && surah.nomor !== 9 && (
-        <Text
-          style={{
-            color: "white",
-            fontSize: 28,
-            textAlign: "center",
-            marginBottom: 32,
-            fontFamily: "Scheherazade",
-          }}
-        >
-          بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-        </Text>
-      )}
+        {surah.nomor !== 1 && surah.nomor !== 9 && (
+          <Text
+            style={{
+              color: "white",
+              fontSize: 28,
+              textAlign: "center",
+              marginBottom: 32,
+              fontFamily: "Scheherazade",
+            }}
+          >
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </Text>
+        )}
 
-      {surah.ayat.map((ayat: any, index: number) => (
-        <AyatItem
-          key={ayat.nomorAyat}
-          ayat={ayat}
-          isPlaying={playingAyat === ayat.nomorAyat}
-          progress={playingAyat === ayat.nomorAyat ? progress : 0}
-          qori={qori}
-          onPlay={() => handlePlayAyat(index)}
-          onNextQori={() => setQori(getNextQori(qori))}
-        />
-      ))}
-    </ScrollView>
+        {surah.ayat.map((ayat: any, index: number) => (
+          <AyatItem
+            key={ayat.nomorAyat}
+            ayat={ayat}
+            isPlaying={playingAyat === ayat.nomorAyat}
+            progress={playingAyat === ayat.nomorAyat ? progress : 0}
+            qori={qori}
+            onPlay={() => handlePlayAyat(index)}
+            onNextQori={() => setQori(getNextQori(qori))}
+          />
+        ))}
+      </ScrollView>
+    </View>
   );
 }
