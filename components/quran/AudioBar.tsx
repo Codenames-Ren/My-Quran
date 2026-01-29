@@ -1,6 +1,7 @@
 import { styles } from "@/src/styles/surah.styles";
 import { QORI_LIST, QoriKey } from "@/src/utils/qori";
-import { Text, View } from "react-native";
+import { useEffect, useRef } from "react";
+import { Animated, Text, View } from "react-native";
 
 type Props = {
   isPlaying: boolean;
@@ -17,16 +18,31 @@ export function AudioBar({
   onPlay,
   onNextQori,
 }: Props) {
+  const progressAnim = useRef(new Animated.Value(progress)).current;
+
+  useEffect(() => {
+    Animated.timing(progressAnim, {
+      toValue: progress,
+      duration: 200,
+      useNativeDriver: false,
+    }).start();
+  }, [progress]);
+
+  const progressWidth = progressAnim.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["0%", "100%"],
+  });
+
   return (
     <View style={styles.audioBar}>
       <Text onPress={onPlay} style={styles.audioButton}>
         {isPlaying ? "⏸" : "▶️"}
       </Text>
-
       <View style={styles.progressTrack}>
-        <View style={[styles.progressFill, { width: `${progress * 100}%` }]} />
+        <Animated.View
+          style={[styles.progressFill, { width: progressWidth }]}
+        />
       </View>
-
       <Text onPress={onNextQori} style={styles.qoriText}>
         {QORI_LIST[qori]}
       </Text>
