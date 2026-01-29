@@ -39,7 +39,7 @@ export default function HomeScreen() {
                 style={styles.icon}
               />
             </View>
-            <Text style={styles.cardText}>Pengingat Waktu Sholat</Text>
+            <Text style={styles.cardText}>Jadwal Sholat</Text>
           </Pressable>
         </Link>
 
@@ -63,9 +63,20 @@ export default function HomeScreen() {
                 style={styles.icon}
               />
             </View>
-            <Text style={styles.cardText}>Wirid dan Doa</Text>
+            <Text style={styles.cardText}>Kumpulan Doa</Text>
           </Pressable>
         </Link>
+        {/* <Link href="/coming-soon" asChild>
+          <Pressable style={styles.card}>
+            <View style={styles.iconWrapper}>
+              <Image
+                source={require("@/assets/icons/rukun.png")}
+                style={styles.icon}
+              />
+            </View>
+            <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
+          </Pressable>
+        </Link> */}
       </View>
     </SafeAreaView>
   );
