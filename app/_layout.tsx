@@ -5,8 +5,10 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
+import * as NavigationBar from "expo-navigation-bar";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
+import { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function RootLayout() {
@@ -14,6 +16,19 @@ export default function RootLayout() {
   const [fontsLoaded] = useFonts({
     Scheherazade: require("@/assets/fonts/Scheherazade-Regular.ttf"),
   });
+
+  {
+    /* Set Navigation Bar Color */
+  }
+  useEffect(() => {
+    async function setupNavBar() {
+      await NavigationBar.setPositionAsync("absolute");
+      await NavigationBar.setBackgroundColorAsync("#0F172A");
+      await NavigationBar.setButtonStyleAsync("light");
+    }
+
+    setupNavBar();
+  }, []);
 
   if (!fontsLoaded) {
     return null;
