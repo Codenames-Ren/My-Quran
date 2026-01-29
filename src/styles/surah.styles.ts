@@ -1,4 +1,3 @@
-// src/styles/surah.styles.ts
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -27,7 +26,6 @@ export const styles = StyleSheet.create({
     color: "#94A38B",
     fontSize: 12,
   },
-
   ayatContainer: {
     marginBottom: 28,
   },
@@ -49,7 +47,6 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 10,
   },
-
   audioBar: {
     flexDirection: "row",
     alignItems: "center",
@@ -69,10 +66,12 @@ export const styles = StyleSheet.create({
     borderRadius: 2,
     backgroundColor: "#334155",
     marginRight: 12,
+    overflow: "hidden",
   },
   progressFill: {
     height: "100%",
     backgroundColor: "#38BDF8",
+    borderRadius: 2,
   },
   qoriText: {
     color: "#94A3B8",
