@@ -11,6 +11,7 @@ type Props = {
   qori: QoriKey;
   onPlay(): void;
   onNextQori(): void;
+  highlighted?: boolean;
 };
 
 export function AyatItem({
@@ -20,19 +21,23 @@ export function AyatItem({
   qori,
   onPlay,
   onNextQori,
+  highlighted,
 }: Props) {
+  const arabicText = `${ayat.teksArab} ۝${toArabicNumber(ayat.nomorAyat)}`;
+
   return (
     <View style={styles.ayatContainer}>
       <Text style={styles.arab}>
-        {ayat.teksArab} ۝{toArabicNumber(ayat.nomorAyat)}
+        {highlighted ? (
+          <Text style={{ color: "#37BDF8" }}>{arabicText}</Text>
+        ) : (
+          arabicText
+        )}
       </Text>
-
       <Text style={styles.latin}>{ayat.teksLatin}</Text>
-
       <Text style={styles.terjemahan}>
         {ayat.nomorAyat}. {ayat.teksIndonesia}
       </Text>
-
       <AudioBar
         isPlaying={isPlaying}
         progress={progress}
