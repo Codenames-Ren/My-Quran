@@ -1,9 +1,5 @@
 import { useColorScheme } from "@/src/hooks/use-color-scheme";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
+import { DarkTheme, ThemeProvider } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import * as NavigationBar from "expo-navigation-bar";
 import { Stack } from "expo-router";
@@ -17,16 +13,12 @@ export default function RootLayout() {
     Scheherazade: require("@/assets/fonts/Scheherazade-Regular.ttf"),
   });
 
-  {
-    /* Set Navigation Bar Color */
-  }
   useEffect(() => {
     async function setupNavBar() {
       await NavigationBar.setPositionAsync("absolute");
       await NavigationBar.setBackgroundColorAsync("#0F172A");
       await NavigationBar.setButtonStyleAsync("light");
     }
-
     setupNavBar();
   }, []);
 
@@ -34,9 +26,19 @@ export default function RootLayout() {
     return null;
   }
 
+  const customTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: "#0F172A",
+      card: "#0F172A",
+      primary: "#0F172A",
+    },
+  };
+
   return (
-    <SafeAreaProvider>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <SafeAreaProvider style={{ backgroundColor: "#0F172A" }}>
+      <ThemeProvider value={customTheme}>
         <StatusBar
           style="light"
           backgroundColor="#0F172A"
@@ -47,7 +49,11 @@ export default function RootLayout() {
             headerStyle: {
               backgroundColor: "#0F172A",
             },
-            headerTintColor: "white",
+            headerTintColor: "#ffffff",
+            contentStyle: {
+              backgroundColor: "#0F172A",
+            },
+            presentation: "card",
           }}
         >
           <Stack.Screen name="index" options={{ headerShown: false }} />
