@@ -18,65 +18,67 @@ export default function HomeScreen() {
       </View>
 
       {/* GRID MENU */}
-      <View style={styles.grid}>
-        <Link href="/quran" asChild>
-          <Pressable style={styles.card}>
-            <View style={styles.iconWrapper}>
-              <Image
-                source={require("@/assets/icons/quran.png")}
-                style={styles.icon}
-              />
-            </View>
-            <Text style={styles.cardText}>Al-Qur'an</Text>
-          </Pressable>
-        </Link>
+      <View style={styles.gridContainer}>
+        <View style={styles.gridRow}>
+          <Link href="/quran" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/quran.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Al-Qur'an</Text>
+            </Pressable>
+          </Link>
+          <Link href="/coming-soon" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/mosque.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Jadwal Sholat</Text>
+            </Pressable>
+          </Link>
+          <Link href="/coming-soon" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/yasin.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Yasin & Tahlil</Text>
+            </Pressable>
+          </Link>
+          <Link href="/coming-soon" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/prayer.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Kumpulan Doa</Text>
+            </Pressable>
+          </Link>
+        </View>
 
-        <Link href="/coming-soon" asChild>
-          <Pressable style={styles.card}>
-            <View style={styles.iconWrapper}>
-              <Image
-                source={require("@/assets/icons/prayer.png")}
-                style={styles.icon}
-              />
-            </View>
-            <Text style={styles.cardText}>Jadwal Sholat</Text>
-          </Pressable>
-        </Link>
-
-        <Link href="/coming-soon" asChild>
-          <Pressable style={styles.card}>
-            <View style={styles.iconWrapper}>
-              <Image
-                source={require("@/assets/icons/quran.png")}
-                style={styles.icon}
-              />
-            </View>
-            <Text style={styles.cardText}>Yasin & Tahlil</Text>
-          </Pressable>
-        </Link>
-
-        <Link href="/coming-soon" asChild>
-          <Pressable style={styles.card}>
-            <View style={styles.iconWrapper}>
-              <Image
-                source={require("@/assets/icons/rukun.png")}
-                style={styles.icon}
-              />
-            </View>
-            <Text style={styles.cardText}>Kumpulan Doa</Text>
-          </Pressable>
-        </Link>
-        {/* <Link href="/coming-soon" asChild>
-          <Pressable style={styles.card}>
-            <View style={styles.iconWrapper}>
-              <Image
-                source={require("@/assets/icons/rukun.png")}
-                style={styles.icon}
-              />
-            </View>
-            <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
-          </Pressable>
-        </Link> */}
+        <View style={styles.gridRowCenter}>
+          <Link href="/coming-soon" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/ramadhan.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
+            </Pressable>
+          </Link>
+        </View>
       </View>
     </SafeAreaView>
   );
