@@ -9,6 +9,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
+
   const [fontsLoaded] = useFonts({
     Scheherazade: require("@/assets/fonts/Scheherazade-Regular.ttf"),
   });
@@ -54,6 +55,8 @@ export default function RootLayout() {
               backgroundColor: "#0F172A",
             },
             presentation: "card",
+            gestureEnabled: true,
+            fullScreenGestureEnabled: false,
           }}
         >
           <Stack.Screen name="index" options={{ headerShown: false }} />

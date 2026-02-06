@@ -29,6 +29,10 @@ export const styles = StyleSheet.create({
   ayatContainer: {
     marginBottom: 28,
   },
+  audioBarWrapper: {
+    marginTop: 8,
+    width: "80%",
+  },
   arab: {
     color: "white",
     fontSize: 26,
