@@ -21,7 +21,8 @@ export default function SurahDetailScreen() {
   const [qori, setQori] = useState<QoriKey>("05");
   const [highlight, setHighlightAyat] = useState<number | null>(null);
 
-  const { playAyat, playingAyat, progress } = useAyatAudio();
+  const { playAyat, playingAyat, progress, currentTime, duration } =
+    useAyatAudio(); // ← Tambahin currentTime & duration
   const listRef = useRef<FlatList>(null);
 
   useEffect(() => {
@@ -44,7 +45,6 @@ export default function SurahDetailScreen() {
       setSurah(res.data);
       navigation.setOptions({ title: res.data.namaLatin });
 
-      // Simpen ke cache
       await cacheSurah(Number(id), res.data);
     } catch (error) {
       console.error(error);
@@ -144,6 +144,8 @@ export default function SurahDetailScreen() {
                     surah={surah}
                     qori={qori}
                     isPlayingFull={playingAyat === 0}
+                    currentTime={playingAyat === 0 ? currentTime : 0}
+                    duration={playingAyat === 0 ? duration : 0}
                     onPlayFull={handlePlayFullAyat}
                     onNextQori={() => setQori(getNextQori(qori))}
                   />
