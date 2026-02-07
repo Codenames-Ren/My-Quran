@@ -5,6 +5,8 @@ export function useAyatAudio() {
   const [sound, setSound] = useState<Audio.Sound | null>(null);
   const [playingAyat, setPlayingAyat] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     return () => {
@@ -23,6 +25,8 @@ export function useAyatAudio() {
       setSound(null);
       setPlayingAyat(null);
       setProgress(0);
+      setCurrentTime(0);
+      setDuration(0);
       return;
     }
 
@@ -39,6 +43,9 @@ export function useAyatAudio() {
     newSound.setOnPlaybackStatusUpdate((status) => {
       if (!status.isLoaded) return;
 
+      setCurrentTime(status.positionMillis / 1000);
+      setDuration(status.durationMillis ? status.durationMillis / 1000 : 0);
+
       if (status.durationMillis) {
         setProgress(status.positionMillis / status.durationMillis);
       }
@@ -48,6 +55,8 @@ export function useAyatAudio() {
         setSound(null);
         setPlayingAyat(null);
         setProgress(0);
+        setCurrentTime(0);
+        setDuration(0);
         onFinish?.();
       }
     });
@@ -57,5 +66,7 @@ export function useAyatAudio() {
     playAyat,
     playingAyat,
     progress,
+    currentTime,
+    duration,
   };
 }

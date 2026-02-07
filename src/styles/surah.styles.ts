@@ -64,18 +64,26 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     marginRight: 12,
   },
-  progressTrack: {
+  progressContainer: {
     flex: 1,
+    marginHorizontal: 10,
+  },
+  progressTrack: {
     height: 4,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
     borderRadius: 2,
-    backgroundColor: "#334155",
-    marginRight: 12,
     overflow: "hidden",
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#38BDF8",
+    backgroundColor: "#ffffff",
     borderRadius: 2,
+  },
+  durationText: {
+    fontSize: 10,
+    color: "#ffffff",
+    marginTop: 4,
+    textAlign: "center",
   },
   qoriText: {
     color: "#94A3B8",

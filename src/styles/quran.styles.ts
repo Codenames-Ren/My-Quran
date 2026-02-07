@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
 
   number: {
     color: "white",
-    fontSize: 18,
+    fontSize: 16,
     width: 32,
     textAlign: "center",
     marginRight: 12,
