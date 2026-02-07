@@ -39,7 +39,7 @@ export default function BarLoader({
             easing: Easing.ease,
             useNativeDriver: true,
           }),
-          Animated.delay(400),
+          Animated.delay(400 - delay),
         ]),
       );
     };
@@ -57,7 +57,7 @@ export default function BarLoader({
       animation2.stop();
       animation3.stop();
     };
-  }, []);
+  }, [anim1, anim2, anim3]);
 
   return (
     <View style={styles.container}>
