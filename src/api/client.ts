@@ -1,9 +1,20 @@
-const BASE_URL = "https://equran.id/api/v2";
+import { API_BASE } from "./api.config";
 
-export async function apiFetch<T>(endpoint: string): Promise<T> {
-  const res = await fetch(`${BASE_URL}${endpoint}`);
+type ApiFetchOptions = {
+  basePath?: string;
+};
+
+export async function apiFetch<T>(
+  endpoint: string,
+  options?: ApiFetchOptions,
+): Promise<T> {
+  const basePath = options?.basePath ?? "";
+  const url = `${API_BASE}${basePath}${endpoint}`;
+
+  const res = await fetch(url);
+
   if (!res.ok) {
-    throw new Error("Failed to fetch API");
+    throw new Error(`Failed to fetch API: ${url}`);
   }
 
   return res.json() as Promise<T>;

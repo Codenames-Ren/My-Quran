@@ -2,7 +2,7 @@
   "expo": {
     "name": "My-Qur'an",
     "slug": "My-Quran",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "scheme": "myquran",
@@ -12,6 +12,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.anonymous.MyQuran",
+      "versionCode": 2,
       "adaptiveIcon": {
         "backgroundColor": "#0F172A",
         "foregroundImage": "./assets/images/logo.png"
@@ -22,8 +24,7 @@
       "permissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
-      ],
-      "package": "com.anonymous.MyQuran"
+      ]
     },
     "web": {
       "output": "static",

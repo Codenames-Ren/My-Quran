@@ -1,3 +1,4 @@
+import { API_PATH } from "./api.config";
 import { apiFetch } from "./client";
 
 export type SurahDetailResponse = {
@@ -11,7 +12,12 @@ export type SurahDetailResponse = {
   };
 };
 
-export const getAllSurah = () => apiFetch<{ data: any[] }>("/surat");
+export const getAllSurah = () =>
+  apiFetch<{ data: any[] }>("/surat", {
+    basePath: API_PATH.SURAT,
+  });
 
 export const getSurahDetail = (id: number) =>
-  apiFetch<SurahDetailResponse>(`/surat/${id}`);
+  apiFetch<SurahDetailResponse>(`/surat/${id}`, {
+    basePath: API_PATH.SURAT,
+  });
