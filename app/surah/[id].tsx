@@ -1,4 +1,5 @@
 import BarLoader from "@/components/quran/BarLoader";
+import CatLoader from "@/components/quran/CatLoader";
 import { AyatItem } from "@/components/quran/surah/AyatItem";
 import { AyatSearchController } from "@/components/quran/surah/AyatSearchController";
 import { SurahHeader } from "@/components/quran/surah/SurahHeader";
@@ -111,8 +112,8 @@ export default function SurahDetailScreen() {
               alignItems: "center",
             }}
           >
-            <BarLoader color="#10B981" size="large" />
-            <Text style={{ color: "#94A3B8", marginTop: 16, fontSize: 14 }}>
+            <CatLoader size="large" />
+            <Text style={{ color: "#94A3B8", marginTop: 10, fontSize: 16 }}>
               Memuat surah...
             </Text>
           </View>
