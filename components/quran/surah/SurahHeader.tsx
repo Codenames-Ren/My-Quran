@@ -22,7 +22,7 @@ export function SurahHeader({
   onPlayFull,
   onNextQori,
 }: Props) {
-  // Hitung progress berdasarkan currentTime/duration
+  // Counting progress duration
   const progress = duration > 0 ? currentTime / duration : 0;
 
   return (

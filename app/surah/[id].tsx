@@ -23,7 +23,7 @@ export default function SurahDetailScreen() {
   const [highlight, setHighlightAyat] = useState<number | null>(null);
 
   const { playAyat, playingAyat, progress, currentTime, duration } =
-    useAyatAudio(); // ← Tambahin currentTime & duration
+    useAyatAudio();
   const listRef = useRef<FlatList>(null);
 
   useEffect(() => {
