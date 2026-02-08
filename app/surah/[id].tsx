@@ -22,8 +22,17 @@ export default function SurahDetailScreen() {
   const [qori, setQori] = useState<QoriKey>("05");
   const [highlight, setHighlightAyat] = useState<number | null>(null);
 
-  const { playAyat, playingAyat, progress, currentTime, duration } =
-    useAyatAudio();
+  const {
+    playAyat,
+    stopAudio,
+    stopAyatAudio,
+    seekTo,
+    playingAyat,
+    progress,
+    currentTime,
+    duration,
+    isPaused,
+  } = useAyatAudio();
   const listRef = useRef<FlatList>(null);
 
   useEffect(() => {
@@ -56,6 +65,12 @@ export default function SurahDetailScreen() {
 
   function handlePlayAyat(index: number) {
     const ayat = surah.ayat[index];
+
+    if (playingAyat === ayat.nomorAyat) {
+      stopAyatAudio();
+      return;
+    }
+
     playAyat(ayat.audio[qori], ayat.nomorAyat, () => {
       const next = index + 1;
       if (next < surah.ayat.length) handlePlayAyat(next);
@@ -65,6 +80,19 @@ export default function SurahDetailScreen() {
   function handlePlayFullAyat() {
     if (!surah?.audioFull) return;
     playAyat(surah.audioFull[qori], 0);
+  }
+
+  function handleStopFullAyat() {
+    stopAudio();
+  }
+
+  function handleSeekFullAyat(seconds: number) {
+    seekTo(seconds);
+  }
+
+  function handleNextQori() {
+    stopAudio();
+    setQori(getNextQori(qori));
   }
 
   function jumpToAyat(ayatNumber: number | null) {
@@ -145,10 +173,13 @@ export default function SurahDetailScreen() {
                     surah={surah}
                     qori={qori}
                     isPlayingFull={playingAyat === 0}
+                    isPaused={playingAyat === 0 ? isPaused : false}
                     currentTime={playingAyat === 0 ? currentTime : 0}
                     duration={playingAyat === 0 ? duration : 0}
                     onPlayFull={handlePlayFullAyat}
-                    onNextQori={() => setQori(getNextQori(qori))}
+                    onStopFull={handleStopFullAyat}
+                    onSeekFull={handleSeekFullAyat}
+                    onNextQori={handleNextQori}
                   />
                   {surah.nomor !== 1 && surah.nomor !== 9 && (
                     <Text
@@ -173,7 +204,7 @@ export default function SurahDetailScreen() {
                   qori={qori}
                   highlighted={highlight === item.nomorAyat}
                   onPlay={() => handlePlayAyat(index)}
-                  onNextQori={() => setQori(getNextQori(qori))}
+                  onNextQori={handleNextQori}
                 />
               )}
             />
