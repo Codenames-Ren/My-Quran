@@ -35,17 +35,6 @@ export default function HomeScreen() {
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
-                  source={require("@/assets/icons/mosque.png")}
-                  style={styles.icon}
-                />
-              </View>
-              <Text style={styles.cardText}>Jadwal Sholat</Text>
-            </Pressable>
-          </Link>
-          <Link href="/coming-soon" asChild>
-            <Pressable style={styles.card}>
-              <View style={styles.iconWrapper}>
-                <Image
                   source={require("@/assets/icons/yasin.png")}
                   style={styles.icon}
                 />
@@ -54,6 +43,17 @@ export default function HomeScreen() {
             </Pressable>
           </Link>
           <Link href="/coming-soon" asChild>
+            <Pressable style={styles.card}>
+              <View style={styles.iconWrapper}>
+                <Image
+                  source={require("@/assets/icons/mosque.png")}
+                  style={styles.icon}
+                />
+              </View>
+              <Text style={styles.cardText}>Jadwal Sholat</Text>
+            </Pressable>
+          </Link>
+          <Link href="/doa" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
