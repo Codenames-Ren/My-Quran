@@ -7,9 +7,12 @@ type Props = {
   surah: any;
   qori: QoriKey;
   isPlayingFull: boolean;
+  isPaused?: boolean;
   currentTime?: number;
   duration?: number;
   onPlayFull: () => void;
+  onStopFull: () => void;
+  onSeekFull: (seconds: number) => void;
   onNextQori: () => void;
 };
 
@@ -17,12 +20,14 @@ export function SurahHeader({
   surah,
   qori,
   isPlayingFull,
+  isPaused = false,
   currentTime = 0,
   duration = 0,
   onPlayFull,
+  onStopFull,
+  onSeekFull,
   onNextQori,
 }: Props) {
-  // Counting progress duration
   const progress = duration > 0 ? currentTime / duration : 0;
 
   return (
@@ -39,11 +44,15 @@ export function SurahHeader({
       <View style={styles.audioBarWrapper}>
         <AudioBar
           isPlaying={isPlayingFull}
+          isPaused={isPaused}
           progress={progress}
           currentTime={currentTime}
           duration={duration}
           qori={qori}
+          isFullAudio={true}
           onPlay={onPlayFull}
+          onStop={onStopFull}
+          onSeek={onSeekFull}
           onNextQori={onNextQori}
         />
       </View>
