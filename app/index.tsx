@@ -46,11 +46,11 @@ export default function HomeScreen() {
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
-                  source={require("@/assets/icons/mosque.png")}
+                  source={require("@/assets/icons/ramadhan.png")}
                   style={styles.icon}
                 />
               </View>
-              <Text style={styles.cardText}>Jadwal Sholat</Text>
+              <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
             </Pressable>
           </Link>
           <Link href="/doa" asChild>
@@ -66,19 +66,19 @@ export default function HomeScreen() {
           </Link>
         </View>
 
-        <View style={styles.gridRowCenter}>
+        {/* <View style={styles.gridRowCenter}>
           <Link href="/coming-soon" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
-                  source={require("@/assets/icons/ramadhan.png")}
+                  source={require("@/assets/icons/mosque.png")}
                   style={styles.icon}
                 />
               </View>
-              <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
+              <Text style={styles.cardText}>Jadwal Shalat</Text>
             </Pressable>
           </Link>
-        </View>
+        </View> */}
       </View>
     </SafeAreaView>
   );
