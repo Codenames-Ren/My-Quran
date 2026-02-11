@@ -5,10 +5,33 @@ import { FlatList, Pressable, Text, View } from "react-native";
 
 type Props = {
   doa: DoaListItem[];
+  highlight?: string;
 };
 
-export function DoaList({ doa }: Props) {
+const HIGHLIGHT_COLOR = "#38BDF8";
+
+export function DoaList({ doa, highlight = "" }: Props) {
   const router = useRouter();
+
+  const highlightText = (text: string, query?: string) => {
+    if (!query) return text;
+
+    const lower = text.toLowerCase();
+    const q = query.toLowerCase();
+    const index = lower.indexOf(q);
+
+    if (index === -1) return text;
+
+    return (
+      <>
+        {text.slice(0, index)}
+        <Text style={{ color: HIGHLIGHT_COLOR }}>
+          {text.slice(index, index + query.length)}
+        </Text>
+        {text.slice(index + query.length)}
+      </>
+    );
+  };
 
   return (
     <FlatList
@@ -21,9 +44,15 @@ export function DoaList({ doa }: Props) {
           style={styles.item}
         >
           <Text style={styles.number}>{item.id}</Text>
+
           <View style={styles.middle}>
-            <Text style={styles.nama}>{item.nama}</Text>
-            <Text style={styles.grup}>{item.grup}</Text>
+            <Text style={styles.nama}>
+              {highlightText(item.nama, highlight)}
+            </Text>
+
+            <Text style={styles.grup}>
+              {highlightText(item.grup, highlight)}
+            </Text>
           </View>
         </Pressable>
       )}
