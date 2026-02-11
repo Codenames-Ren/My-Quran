@@ -1,4 +1,4 @@
-import { DoaList } from "@/components/doa/DoaList";
+import { DoaSearchController } from "@/components/doa/DoaSearchController";
 import CatLoader from "@/components/quran/CatLoader";
 import { DoaListItem, getAllDoa } from "@/src/api/doa";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ export default function DoaScreen() {
           </Text>
         </View>
       ) : (
-        <DoaList doa={doa} />
+        <DoaSearchController doa={doa} />
       )}
     </View>
   );
