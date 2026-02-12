@@ -2,7 +2,7 @@
   "expo": {
     "name": "My-Qur'an",
     "slug": "My-Quran",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
     "scheme": "myquran",
@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.anonymous.MyQuran",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "backgroundColor": "#0F172A",
         "foregroundImage": "./assets/images/logo.png"
