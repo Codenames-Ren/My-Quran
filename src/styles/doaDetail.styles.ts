@@ -33,7 +33,7 @@ export const styles = StyleSheet.create({
     marginBottom: 24,
   },
   sectionTitle: {
-    color: "#38BDF8",
+    color: "#10B981",
     fontSize: 14,
     fontWeight: "600",
     marginBottom: 8,
@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
     marginBottom: 8,
   },
   toggleIcon: {
-    color: "#38BDF8",
+    color: "#10B981",
     fontSize: 12,
   },
   tentang: {

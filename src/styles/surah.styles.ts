@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#1E2938",
   },
   surahInfoText: {
-    color: "#94A38B",
+    color: "#10B981",
     fontSize: 12,
   },
   ayatContainer: {
