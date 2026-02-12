@@ -4,5 +4,5 @@ export const API_PATH = {
   SURAT: "/api/v2",
   DOA: "/api",
   SHALAT: "/api/v2/shalat",
-  IMSAKIYAH: "api/v2/imsakiyah",
+  IMSAKIYAH: "/api/v2/imsakiyah",
 } as const;
