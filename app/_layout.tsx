@@ -62,6 +62,12 @@ export default function RootLayout() {
           <Stack.Screen name="quran" options={{ title: "Al-Qur'an" }} />
           <Stack.Screen name="surah/[id]" />
           <Stack.Screen name="doa" options={{ title: "Kumpulan Doa" }} />
+          <Stack.Screen
+            name="imsakiyah"
+            options={{ title: "Jadwal Imsakiyah" }}
+          />
+          <Stack.Screen name="imsakiyah/provinsi" />
+          <Stack.Screen name="imsakiyah/kabkota" />
           <Stack.Screen name="coming-soon" options={{ title: "Coming Soon" }} />
         </Stack>
       </ThemeProvider>
