@@ -42,7 +42,7 @@ export default function HomeScreen() {
               <Text style={styles.cardText}>Yasin & Tahlil</Text>
             </Pressable>
           </Link>
-          <Link href="/coming-soon" asChild>
+          <Link href="/imsakiyah" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
