@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     marginBottom: 8,
   },
   grup: {
-    color: "#94A3B8",
+    color: "#10B981",
     fontSize: 14,
     textAlign: "center",
     paddingVertical: 4,
@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
     borderColor: "#334155",
   },
   tagText: {
-    color: "#94A3B8",
+    color: "#10B981",
     fontSize: 12,
   },
 });
