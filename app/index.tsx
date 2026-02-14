@@ -31,7 +31,7 @@ export default function HomeScreen() {
               <Text style={styles.cardText}>Al-Qur'an</Text>
             </Pressable>
           </Link>
-          <Link href="/coming-soon" asChild>
+          <Link href="/yasin-tahlil" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
