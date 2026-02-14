@@ -37,7 +37,7 @@ export default function ImsakiyahScreen() {
     if (!hasPermission) {
       setLoading(false);
       Alert.alert(
-        "Permission Ditolak",
+        "Izin Ditolak",
         "Izinkan akses lokasi untuk mendeteksi otomatis, atau pilih lokasi manual.",
         [
           {
