@@ -61,12 +61,4 @@ export const TAHLIL_AL_BAQARAH: TahlilItem[] = [
     arti: "5. Mereka itulah yang mendapat petunjuk dari Tuhannya, dan mereka itulah orang-orang yang beruntung.",
     ayatNumber: 5,
   },
-
-  // SURAH AL-BAQARAH (284-286)
-  {
-    type: "text",
-    arab: "Surah Al-Baqarah (284-286)",
-    latin: "Surah Al-Baqarah (284-286)",
-    arti: "",
-  },
 ];
