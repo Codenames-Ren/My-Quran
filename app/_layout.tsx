@@ -68,6 +68,10 @@ export default function RootLayout() {
           />
           <Stack.Screen name="imsakiyah/provinsi" />
           <Stack.Screen name="imsakiyah/kabkota" />
+          <Stack.Screen
+            name="yasin-tahlil"
+            options={{ title: "Yasin & Tahlil" }}
+          />
           <Stack.Screen name="coming-soon" options={{ title: "Coming Soon" }} />
         </Stack>
       </ThemeProvider>
