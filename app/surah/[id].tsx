@@ -182,17 +182,39 @@ export default function SurahDetailScreen() {
                     onNextQori={handleNextQori}
                   />
                   {surah.nomor !== 1 && surah.nomor !== 9 && (
-                    <Text
-                      style={{
-                        color: "white",
-                        fontSize: 28,
-                        textAlign: "center",
-                        marginBottom: 32,
-                        fontFamily: "Scheherazade",
-                      }}
-                    >
-                      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-                    </Text>
+                    <View style={{ marginBottom: 32 }}>
+                      <Text
+                        style={{
+                          color: "white",
+                          fontSize: 28,
+                          textAlign: "center",
+                          fontFamily: "Scheherazade",
+                          marginBottom: 8,
+                        }}
+                      >
+                        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                      </Text>
+                      <Text
+                        style={{
+                          color: "#999",
+                          fontSize: 16,
+                          textAlign: "center",
+                          fontStyle: "italic",
+                          marginBottom: 4,
+                        }}
+                      >
+                        Bismillāhir-raḥmānir-raḥīm
+                      </Text>
+                      <Text
+                        style={{
+                          color: "#ffffff",
+                          fontSize: 14,
+                          textAlign: "center",
+                        }}
+                      >
+                        Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang
+                      </Text>
+                    </View>
                   )}
                 </>
               }
