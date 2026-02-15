@@ -41,8 +41,12 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
 
 ## 📱 Screenshots
 
+<p align="center"> Home </p>
 <p align="center">
-  <img src="screenshots/home.webp" width="200" alt="Home Screen"/>
+<img src="screenshots/home.webp" width="200" alt="Home Screen"/>
+</p>
+
+<p align="center">
   <img src="screenshots/quran_list.webp" width="200" alt="Quran List"/>
   <img src="screenshots/quran.webp" width="200" alt="Quran Reader"/>
   <img src="screenshots/yasin.webp" width="200" alt="Yasin"/>
