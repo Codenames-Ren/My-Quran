@@ -48,9 +48,6 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
   <img src="screenshots/yasin.webp" width="200" alt="Yasin"/>
   <img src="screenshots/tahlil.webp" width="200" alt="Tahlil"/>
   <img src="screenshots/doa.webp" width="200" alt="Prayer Collection"/>
-</p>
-
-<p align="center">
   <img src="screenshots/imsakiyah.webp" width="200" alt="Imsakiyah Schedule"/>
 </p>
 
