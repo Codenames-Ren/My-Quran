@@ -46,7 +46,7 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
   <img src="screenshots/home.webp" width="280" alt="Home Screen"/>
 </p>
 
-<p align="center"><strong>Quran</strong></p>
+<p align="center"><strong>Quran Reader</strong></p>
 <p align="center">
   <img src="screenshots/quran_list.webp" width="280" alt="Quran List"/>
   <img src="screenshots/quran.webp" width="280" alt="Quran Reader"/>
@@ -58,12 +58,12 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
   <img src="screenshots/tahlil.webp" width="280" alt="Tahlil"/>
 </p>
 
-<p align="center"><strong>Imsakiyah</strong></p>
+<p align="center"><strong>Imsakiyah Schedule</strong></p>
 <p align="center">
   <img src="screenshots/imsakiyah.webp" width="280" alt="Imsakiyah Schedule"/>
 </p>
 
-<p align="center"><strong>Doa</strong></p>
+<p align="center"><strong>Doa (Prayer Collection)</strong></p>
 <p align="center">
   <img src="screenshots/doa.webp" width="280" alt="Prayer Collection"/>
 </p>
