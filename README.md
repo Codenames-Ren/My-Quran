@@ -41,34 +41,29 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
 
 ## 📱 Screenshots
 
-### **Home**
-
+<p align="center"><strong>Home</strong></p>
 <p align="center">
   <img src="screenshots/home.webp" width="280" alt="Home Screen"/>
 </p>
 
-### **Quran**
-
+<p align="center"><strong>Quran</strong></p>
 <p align="center">
   <img src="screenshots/quran_list.webp" width="280" alt="Quran List"/>
   <img src="screenshots/quran.webp" width="280" alt="Quran Reader"/>
 </p>
 
-### **Yasin & Tahlil**
-
+<p align="center"><strong>Yasin & Tahlil</strong></p>
 <p align="center">
   <img src="screenshots/yasin.webp" width="280" alt="Yasin"/>
   <img src="screenshots/tahlil.webp" width="280" alt="Tahlil"/>
 </p>
 
-### **Imsakiyah**
-
+<p align="center"><strong>Imsakiyah</strong></p>
 <p align="center">
   <img src="screenshots/imsakiyah.webp" width="280" alt="Imsakiyah Schedule"/>
 </p>
 
-### **Doa**
-
+<p align="center"><strong>Doa</strong></p>
 <p align="center">
   <img src="screenshots/doa.webp" width="280" alt="Prayer Collection"/>
 </p>
