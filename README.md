@@ -36,23 +36,41 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
 - Complete 30-day Ramadhan prayer schedule
 - **Auto-detect location via GPS** for accurate prayer times
 - Manual location selection for flexibility
-- Daily Imsak, Fajr, Dhuha, Dhuhr, Asr, Maghrib, and Isha times
+- Daily Imsak, Fajr, Dhuhr, Asr, Maghrib, and Isha times
 - Location-based calculations ensuring accuracy
 
 ## 📱 Screenshots
 
-<p align="center"><strong> Home </p>
-<p align="center">
-<img src="screenshots/home.webp" width="350" alt="Home Screen"/>
-</p>
+### **Home**
 
 <p align="center">
-  <img src="screenshots/quran_list.webp" width="200" alt="Quran List"/>
-  <img src="screenshots/quran.webp" width="200" alt="Quran Reader"/>
-  <img src="screenshots/yasin.webp" width="200" alt="Yasin"/>
-  <img src="screenshots/tahlil.webp" width="200" alt="Tahlil"/>
-  <img src="screenshots/doa.webp" width="200" alt="Prayer Collection"/>
-  <img src="screenshots/imsakiyah.webp" width="200" alt="Imsakiyah Schedule"/>
+  <img src="screenshots/home.webp" width="280" alt="Home Screen"/>
+</p>
+
+### **Quran**
+
+<p align="center">
+  <img src="screenshots/quran_list.webp" width="280" alt="Quran List"/>
+  <img src="screenshots/quran.webp" width="280" alt="Quran Reader"/>
+</p>
+
+### **Yasin & Tahlil**
+
+<p align="center">
+  <img src="screenshots/yasin.webp" width="280" alt="Yasin"/>
+  <img src="screenshots/tahlil.webp" width="280" alt="Tahlil"/>
+</p>
+
+### **Imsakiyah**
+
+<p align="center">
+  <img src="screenshots/imsakiyah.webp" width="280" alt="Imsakiyah Schedule"/>
+</p>
+
+### **Doa**
+
+<p align="center">
+  <img src="screenshots/doa.webp" width="280" alt="Prayer Collection"/>
 </p>
 
 ## 🛠️ Tech Stack
@@ -135,11 +153,9 @@ This application uses [Equran.id API](https://equran.id)
 ### Main Endpoints:
 
 - `https://equran.id/api/v2/surat` - Get list of all surahs
-- `https://equran.id/api/v2/surat/{id}` - Get specific surah details with verses and audio
-- `https://equran.id/api/doa/{id}` - Get collection of Islamic prayers (doa)
-- `https://equran.id/api/v2/imsakiyah/{provinsi}` - Get Ramadhan Imsakiyah schedule by province
-- `https://equran.id/api/v2/imsakiyah/{kabkota}` - Get Ramadhan Imsakiyah schedule by regency or city
-- `https://equran.id/api/v2/imsakiyah` - Get Ramadhan Imsakiyah schedule by province, regency and city
+- `https://equran.id/api/v2/surat/{number}` - Get specific surah details with verses and audio
+- `https://equran.id/api/doa` - Get collection of Islamic prayers (doa)
+- `https://equran.id/api/v2/imsakiyah/{provinsi}/{tahun}` - Get Ramadhan Imsakiyah schedule by province and year
 
 API integration is handled in the `src/api` directory.
 
