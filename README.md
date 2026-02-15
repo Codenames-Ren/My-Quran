@@ -41,9 +41,9 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
 
 ## 📱 Screenshots
 
-<p align="center"> Home </p>
+<p align="center"><strong> Home </p>
 <p align="center">
-<img src="screenshots/home.webp" width="200" alt="Home Screen"/>
+<img src="screenshots/home.webp" width="350" alt="Home Screen"/>
 </p>
 
 <p align="center">
