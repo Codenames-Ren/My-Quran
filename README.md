@@ -152,7 +152,7 @@ This application uses [Equran.id API](https://equran.id)
 - `https://equran.id/api/doa` - Get collection of Islamic prayers (doa).
 - `https://equran.id/api/v2/imsakiyah/{provinsi}` - Get Ramadhan Imsakiyah schedule by province.
 - `https://equran.id/api/v2/imsakiyah/{kabkota}` - Get Ramadhan Imsakiyah schedule by regency or city.
-- `https://equran.id/api/v2/imsakiyah` - Get Ramadhan Imsakiyah schedule by province, regency or city.
+- `https://equran.id/api/v2/imsakiyah` - Get Ramadhan Imsakiyah schedule by province and regency or city.
 
 API integration is handled in the `src/api` directory.
 
@@ -191,7 +191,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📄 License
 
-This is an open-source project designed to help fellow Muslims access Islamic resources easily and conveniently.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🎓 Learning Resources
 
