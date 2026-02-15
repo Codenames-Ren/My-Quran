@@ -80,7 +80,7 @@ A comprehensive digital Al-Qur'an application built with React Native that provi
 
 Make sure you have installed:
 
-- Node.js (v14 or higher)
+- Node.js (v17 or higher)
 - npm or yarn
 - Expo CLI
 - Android Studio (for emulator) or Expo Go app for physical device
