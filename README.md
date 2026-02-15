@@ -116,7 +116,7 @@ npm start
 My-Quran/
 ├── app/                      # Main application screens (Expo Router)
 │   ├── doa/                 # Prayer collection screens
-│   ├── imsak/               # Imsakiyah schedule screens
+│   ├── imsakiyah/           # Imsakiyah schedule screens
 │   ├── quran/               # Quran reader screens
 │   └── yasin-tahlil/        # Yasin & Tahlil screens
 ├── assets/                   # Images, fonts, icons
@@ -125,7 +125,7 @@ My-Quran/
 │   └── images/              # Images and illustrations
 ├── components/               # Reusable UI components
 │   ├── doa/                 # Prayer-related components
-│   ├── imsak/               # Imsakiyah components
+│   ├── imsakiyah/           # Imsakiyah components
 │   ├── quran/               # Quran reader components
 │   └── ui/                  # General UI components
 ├── src/                      # Core source code
