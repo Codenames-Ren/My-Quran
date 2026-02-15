@@ -4,8 +4,8 @@ export const TAHLIL_AL_BAQARAH: TahlilItem[] = [
   // SURAH AL-BAQARAH (1-5)
   {
     type: "text",
-    arab: "Surah Al-Baqarah (1-5)",
-    latin: "Surah Al-Baqarah (1-5)",
+    arab: "Surah Al-Baqarah (1 - 5)",
+    latin: "Surah Al-Baqarah (1 - 5)",
     arti: "",
   },
   {

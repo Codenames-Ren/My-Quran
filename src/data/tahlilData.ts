@@ -112,12 +112,6 @@ export const TAHLIL_FULL: TahlilItem[] = [
     latin: "Surah Al-Fatihah",
     arti: "",
   },
-  {
-    type: "text",
-    arab: "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
-    latin: "Bismillāhir-raḥmānir-raḥīm",
-    arti: "Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang",
-  },
   { type: "surah", surahId: 1 },
 
   // SURAH AL-BAQARAH (1-5)
