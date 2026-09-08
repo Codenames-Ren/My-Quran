@@ -12,6 +12,7 @@ export default function HomeScreen() {
           source={require("../assets/images/logo.png")}
           style={styles.logo}
         />
+
         <Text style={styles.title}>My-Qur'an</Text>
         <Text style={styles.subtitle}>Baca • Dengar • Tadabbur</Text>
         <View style={styles.divider} />
@@ -28,9 +29,11 @@ export default function HomeScreen() {
                   style={styles.icon}
                 />
               </View>
+
               <Text style={styles.cardText}>Al-Qur'an</Text>
             </Pressable>
           </Link>
+
           <Link href="/yasin-tahlil" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
@@ -39,20 +42,24 @@ export default function HomeScreen() {
                   style={styles.icon}
                 />
               </View>
+
               <Text style={styles.cardText}>Yasin & Tahlil</Text>
             </Pressable>
           </Link>
-          <Link href="/imsakiyah" asChild>
+
+          <Link href="/shalat" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
                 <Image
-                  source={require("@/assets/icons/ramadhan.png")}
+                  source={require("@/assets/icons/prayer.png")}
                   style={styles.icon}
                 />
               </View>
-              <Text style={styles.cardText}>Jadwal Imsakiyah</Text>
+
+              <Text style={styles.cardText}>Jadwal Shalat</Text>
             </Pressable>
           </Link>
+
           <Link href="/doa" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
@@ -61,12 +68,14 @@ export default function HomeScreen() {
                   style={styles.icon}
                 />
               </View>
+
               <Text style={styles.cardText}>Kumpulan Doa</Text>
             </Pressable>
           </Link>
         </View>
 
-        {/* <View style={styles.gridRowCenter}>
+        {/*
+        <View style={styles.gridRowCenter}>
           <Link href="/coming-soon" asChild>
             <Pressable style={styles.card}>
               <View style={styles.iconWrapper}>
@@ -75,10 +84,12 @@ export default function HomeScreen() {
                   style={styles.icon}
                 />
               </View>
-              <Text style={styles.cardText}>Jadwal Shalat</Text>
+
+              <Text style={styles.cardText}>Coming Soon</Text>
             </Pressable>
           </Link>
-        </View> */}
+        </View>
+        */}
       </View>
     </SafeAreaView>
   );
