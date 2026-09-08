@@ -49,6 +49,7 @@ export default function RootLayout() {
           backgroundColor={THEME_COLOR}
           translucent={false}
         />
+
         <Stack
           screenOptions={{
             headerStyle: { backgroundColor: THEME_COLOR },
@@ -58,21 +59,52 @@ export default function RootLayout() {
             gestureEnabled: true,
           }}
         >
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen name="quran" options={{ title: "Al-Qur'an" }} />
+          <Stack.Screen
+            name="index"
+            options={{ headerShown: false }}
+          />
+
+          <Stack.Screen
+            name="quran"
+            options={{ title: "Al-Qur'an" }}
+          />
+
           <Stack.Screen name="surah/[id]" />
-          <Stack.Screen name="doa" options={{ title: "Kumpulan Doa" }} />
+
+          <Stack.Screen
+            name="doa"
+            options={{ title: "Kumpulan Doa" }}
+          />
+
+          {/* Imsakiyah sementara dinonaktifkan karena API sedang ditakedown */}
+          {/*
           <Stack.Screen
             name="imsakiyah"
             options={{ title: "Jadwal Imsakiyah" }}
           />
           <Stack.Screen name="imsakiyah/provinsi" />
           <Stack.Screen name="imsakiyah/kabkota" />
+          */}
+
+          {/* Jadwal Shalat */}
+          <Stack.Screen
+            name="shalat"
+            options={{ title: "Jadwal Shalat" }}
+          />
+
+          <Stack.Screen name="shalat/provinsi" />
+
+          <Stack.Screen name="shalat/kabkota" />
+
           <Stack.Screen
             name="yasin-tahlil"
             options={{ title: "Yasin & Tahlil" }}
           />
-          <Stack.Screen name="coming-soon" options={{ title: "Coming Soon" }} />
+
+          <Stack.Screen
+            name="coming-soon"
+            options={{ title: "Coming Soon" }}
+          />
         </Stack>
       </ThemeProvider>
     </SafeAreaProvider>
