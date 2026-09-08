@@ -2,6 +2,8 @@ import { API_BASE } from "./api.config";
 
 type ApiFetchOptions = {
   basePath?: string;
+  method?: "GET" | "POST";
+  body?: unknown;
 };
 
 export async function apiFetch<T>(
@@ -11,7 +13,15 @@ export async function apiFetch<T>(
   const basePath = options?.basePath ?? "";
   const url = `${API_BASE}${basePath}${endpoint}`;
 
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    method: options?.method ?? "GET",
+    headers: options?.body
+      ? {
+          "Content-Type": "application/json",
+        }
+      : undefined,
+    body: options?.body ? JSON.stringify(options.body) : undefined,
+  });
 
   if (!res.ok) {
     throw new Error(`Failed to fetch API: ${url}`);
